@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos - Portafolio</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">DevIndex</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="proyectos">
+        <h1>Mis Proyectos</h1>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="js">JavaScript</button>
+            <button class="filter-btn" data-filter="layout">Maquetación</button>
+            <button class="filter-btn" data-filter="api">APIs</button>
+        </div>
+
+        <section class="projects-grid">
+
+            <article class="card" data-category="js">
+                <img src="https://placehold.co/600x400/2563eb/white?text=Calculadora" alt="Calculadora"
+                    class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Calculadora DOM</h2>
+                    <p class="card-desc">Calculadora funcional. Lógica de eventos y manipulación del DOM.</p>
+
+                    <ul class="card-links-list">
+                        <li><a href="./calculadora/ejercicio1.html">Ejercicio previo: Sumas</a></li>
+                        <li><a href="https://developer.mozilla.org" target="_blank">Ref: MDN Eventos</a></li>
+                    </ul>
+
+                    <a href="https://github.com/tu-usuario/repo-calculadora" target="_blank" class="card-btn">
+                        Ver en GitHub
+                    </a>
+                </div>
+            </article>
+
+            <article class="card" data-category="layout">
+                <img src="https://placehold.co/600x400/10b981/white?text=Landing" alt="Landing" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Landing Page Flexbox</h2>
+                    <p class="card-desc">Clon de página de producto utilizando Flexbox y metodología BEM.</p>
+
+                    <ul class="card-links-list">
+                        <li><a href="./landing/wireframe.png">Ver Wireframe</a></li>
+                        <li><a href="./landing/guia-estilos.pdf">Guía de estilos</a></li>
+                    </ul>
+
+                    <a href="https://github.com/tu-usuario/repo-landing" target="_blank" class="card-btn">
+                        Ver en GitHub
+                    </a>
+                </div>
+            </article>
+
+            <article class="card" data-category="js">
+                <img src="https://placehold.co/600x400/f59e0b/white?text=To-Do" alt="ToDo" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">App de Tareas</h2>
+                    <p class="card-desc">Gestor de tareas con LocalStorage y JSON.</p>
+
+                    <ul class="card-links-list">
+                        <li><a href="./todo/v1-simple.html">Versión 1: Sin memoria</a></li>
+                    </ul>
+
+                    <a href="https://github.com/tu-usuario/repo-todo" target="_blank" class="card-btn">
+                        Ver en GitHub
+                    </a>
+                </div>
+            </article>
+
+            <article class="card" data-category="api">
+                <img src="https://placehold.co/600x400/purple/white?text=Pokedex" alt="API" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Pokedex Fetch</h2>
+                    <p class="card-desc">Consumo de PokeAPI asíncrono para listar pokemons.</p>
+
+                    <ul class="card-links-list">
+                        <li><a href="./api/pruebas.js">Script de pruebas</a></li>
+                    </ul>
+
+                    <a href="https://github.com/tu-usuario/repo-pokedex" target="_blank" class="card-btn">
+                        Ver en GitHub
+                    </a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Repositorio de Aprendizaje</p>
+    </footer>
+</body>
+
+</html>
