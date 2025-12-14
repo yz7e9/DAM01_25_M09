@@ -1,4 +1,4 @@
-/* --- 1. Variables (Modo Claro por defecto) --- */
+/* --- 1. Variables (Modo Claro) --- */
 :root {
     --primary-color: #2563eb;
     --primary-hover: #1e40af;
@@ -9,23 +9,23 @@
     --text-secondary: #6b7280;
     --border-color: #e5e7eb;
     --shadow: rgba(0, 0, 0, 0.1);
+    --tag-bg: #e5e7eb;
+    /* Color de fondo para las etiquetas */
 }
 
-/* --- 2. Variables para Modo Oscuro (Automático) --- */
+/* --- 2. Modo Oscuro (Automático) --- */
 @media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #3b82f6;
         --primary-hover: #60a5fa;
         --bg-body: #111827;
-        /* Fondo muy oscuro */
         --bg-card: #1f2937;
-        /* Carta gris oscuro */
         --bg-header: #1f2937;
         --text-main: #f9fafb;
-        /* Texto casi blanco */
         --text-secondary: #9ca3af;
         --border-color: #374151;
         --shadow: rgba(0, 0, 0, 0.5);
+        --tag-bg: #374151;
     }
 }
 
@@ -43,7 +43,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* --- Estilos Generales --- */
+/* --- Header --- */
 header {
     background-color: var(--bg-header);
     box-shadow: 0 2px 4px var(--shadow);
@@ -96,7 +96,7 @@ h1 {
     font-size: 2.5rem;
 }
 
-/* --- 3. Botones de Filtro --- */
+/* --- Filtros --- */
 .filter-container {
     display: flex;
     justify-content: center;
@@ -160,6 +160,25 @@ article.card:hover {
     flex-direction: column;
 }
 
+/* NUEVO: Contenedor de etiquetas (tags) */
+.card-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.75rem;
+    background-color: var(--tag-bg);
+    color: var(--text-secondary);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
 .card-title {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
@@ -172,12 +191,10 @@ article.card:hover {
     margin-bottom: 1rem;
 }
 
-/* --- 4. Lista de Links Internos (Ejercicios, Refs) --- */
 .card-links-list {
     list-style: none;
     margin-bottom: 1.5rem;
     flex-grow: 1;
-    /* Esto empuja el botón al fondo */
 }
 
 .card-links-list li {
@@ -206,11 +223,9 @@ article.card:hover {
     border-color: var(--primary-color);
 }
 
-/* --- Botón GitHub --- */
 .card-btn {
     display: block;
     background-color: #24292e;
-    /* Color GitHub */
     color: white;
     padding: 0.75rem;
     text-decoration: none;
@@ -232,7 +247,6 @@ footer {
     color: var(--text-secondary);
 }
 
-/* Utilidad para ocultar elementos al filtrar */
 .hidden {
     display: none !important;
 }

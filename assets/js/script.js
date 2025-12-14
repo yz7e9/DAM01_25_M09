@@ -1,23 +1,27 @@
-// 1. Seleccionamos los elementos
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.card');
 
-// 2. Añadimos evento click a cada botón
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
 
-        // a. Quitamos la clase 'active' de todos y la ponemos en el clickeado
+        // 1. Gestionar estilo de los botones
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
-        // b. Obtenemos el valor del filtro (ej: 'js', 'all')
+        // 2. Obtener el filtro seleccionado
         const filterValue = button.getAttribute('data-filter');
 
-        // c. Recorremos las cartas para mostrar u ocultar
+        // 3. Filtrar cartas
         projectCards.forEach(card => {
-            const cardCategory = card.getAttribute('data-category');
+            // Obtenemos las categorías de la carta: "js api"
+            const cardCategoriesStr = card.getAttribute('data-category');
 
-            if (filterValue === 'all' || filterValue === cardCategory) {
+            // Convertimos el string en un array: ["js", "api"]
+            // Esto evita errores si una palabra contiene a otra (ej: "javascript" vs "java")
+            const cardCategories = cardCategoriesStr.split(' ');
+
+            // Lógica: Si el filtro es 'all' O si la lista de categorías incluye el filtro
+            if (filterValue === 'all' || cardCategories.includes(filterValue)) {
                 card.classList.remove('hidden');
             } else {
                 card.classList.add('hidden');
