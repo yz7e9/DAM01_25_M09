@@ -15,22 +15,17 @@ function crearTecladoNumerico(num_teclados) {
     contenedor.id = 'teclado-numerico';
     
     for (let i = 1; i <= num_teclados; i++) {
-        let tecla = document.createElement('div');
+        const tecla = document.createElement('div');
         tecla.classList.add('tecla');
         tecla.textContent = i;
         
-        if (i % 2 === 0) {
-            tecla.classList.add('par');
-        }
-        
-        if (i % 3 === 0) {
-            tecla.classList.add('multiplo3');
-        }
+        if (i % 2 === 0) tecla.classList.add('par');
+        if (i % 3 === 0) tecla.classList.add('multiplo3');
         
         contenedor.appendChild(tecla);
     }
     
-    let tecla0 = document.createElement('div');
+    const tecla0 = document.createElement('div');
     tecla0.classList.add('tecla', 'par');
     tecla0.textContent = 0;
     contenedor.appendChild(tecla0);

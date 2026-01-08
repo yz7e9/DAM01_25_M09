@@ -11,8 +11,8 @@ function crearTeclado(num_teclados) {
     const contenedor = document.getElementById('contenedor');
     
     for (let i = 1; i <= num_teclados; i++) {
-        let tecla = document.createElement('div');
-        tecla.classList.add('tecla');
+        const tecla = document.createElement('div');
+        tecla.className = "tecla"
         tecla.textContent = i;
         
         contenedor.appendChild(tecla);
