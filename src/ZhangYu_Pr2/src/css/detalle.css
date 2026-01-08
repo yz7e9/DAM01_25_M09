@@ -1,0 +1,106 @@
+.festival, .release, .artist {
+    width: 100%;
+    margin: 1rem;
+
+    &>div {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+.festival {
+    &>div>div {
+        display: flex;
+        align-items: flex-end;
+
+        &>div {
+            position: absolute;
+            width: 50rem;
+            background-color: rgba(0, 0, 0, .5);
+            border-radius: 10px;
+            right: 10%;
+            padding: 1rem;
+        }
+    }
+    img {
+        border-radius: 10px;
+    }
+    ul {
+        padding: revert;
+    }
+}
+
+.release {
+    header div {
+        display: flex;
+        align-items: center;
+    }
+    &>div>div {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    article {
+        margin: 10px;
+
+        h3 {
+            padding: 0;
+            margin: 0;
+        }
+        &>div {
+            padding: 16px;
+
+            a {
+                padding: 10px;
+                border: 1px solid grey;
+                border-radius: 1000px;
+                margin-top: 5px;
+                display: inline-block;
+            }
+        }
+    }
+    img {
+        border-radius: 1rem 1rem 0 0;
+    }
+    ul {
+        list-style-type: none;
+    }
+}
+
+.record {
+    position: relative;
+    width: 262px; height: 262px;
+    border-radius: 50%;
+    background: 
+    linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, .85) 40%) no-repeat 100% 0,
+    linear-gradient(60deg, rgba(42, 41, 40, .85) 60%, transparent 60%) no-repeat 0 100%,
+    repeating-radial-gradient(#2a2928 0 3px, #ada9a0 4px, #2a2928 5px);
+    background-size: 50% 100%, 100% 50%, 100% 100%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: solid 1px #d9a388;
+        background: url('../../assets/img/releases/M83-Midnight_City.png') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.artist {
+    &>div>div {
+        display: flex;
+        align-items: center;
+
+        div {
+            margin: 0 2rem;
+        }
+    }
+}

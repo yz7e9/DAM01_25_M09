@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta - SoundTecITB</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/alta.css">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html" title="Home">Sound<span>TecITB</span></a></h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#artist">Artistas</a></li>
+                <li><a href="./index.html#festivals">Eventos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#">Alta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="signup">
+            <header>
+                <h2>Dar-se de alta</h2>
+            </header>
+            <form action="#" method="get" oninput="quantitySignupOutput.value=parseInt(quantitySignup.value)">
+                <fieldset class="personalData">
+                    <legend>Datos Personales</legend>
+                    <input type="text" name="nameSignup" placeholder="Nombre" required>
+                    <input type="text" name="surnameSignup" placeholder="Apellido" required>
+                    <div class="gender">
+                        <p>Género: </p>
+                        <div>
+                            <div>
+                                <input type="radio" name="genderSignup" id="man" value="man" required>
+                                <label for="man">Hombre</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="genderSignup" id="woman" value="woman" required>
+                                <label for="woman">Mujer</label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="email" name="emailSignup" placeholder="me@example.com" required>
+                    <div>
+                        <label for="birthSignup">Fecha de nacimiento: </label>
+                        <input type="date" name="birthSignup" id="birthSignup" required>
+                    </div>
+                </fieldset>
+                <fieldset class="tickets">
+                    <legend>Entradas</legend>
+                    <div>
+                        <label for="dateSignup">Fecha de la entrada: </label>
+                        <input type="date" name="dateSignup" id="dateSignup" required>
+                    </div>
+                    <div>
+                        <label for="typeSignup">Tipo de entrada: </label>
+                        <select id="typeSignup" name="typeSignup" required>
+                            <option value="" selected disabled>-- Seleccionar una entrada --</option>
+                            <option value="1-day">Pase de 1 día</option>
+                            <option value="2-day">Pase de 2 días</option>
+                            <option value="full">Pase completo para el festival</option>
+                            <option value="vip">Pase VIP</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="quantitySignup">Cantidad de tickets: </label>
+                        <input type="range" name="quantitySignup" id="quantitySignup" min="1" max="20" value="1">
+                        <output name="quantitySignupOutput" for="quantitySignup">1</output>
+                    </div>
+                </fieldset>
+                <fieldset class="other">
+                    <legend>Otros</legend>
+                    <textarea id="otherSignup" name="otherSignup" rows="3" placeholder="Introduzca los otros requisitos, si los hubiera"></textarea>
+                </fieldset>
+                <div class="terms">
+                    <input type="checkbox" name="termsSignup" id="termsSignup" required>
+                    <label for="termsSignup">Acepto los Términos y Condiciones</label>
+                </div>
+                <input type="submit" value="Dar-se de alta" class="signupBtn">
+            </form>
+        </section>
+        <hr>
+        <section class="contact" id="contact">
+            <header>
+                <h2>Contacta-nos</h2>
+            </header>
+            <form action="#" method="get">
+                <fieldset class="personalData">
+                    <legend>Datos Personales</legend>
+                    <input type="text" name="nameContact" id="nameContact" placeholder="Nombre" required>
+                    <input type="text" name="surnameContact" id="surnameContact" placeholder="Apellido" required>
+                    <input type="email" name="emailContact" id="emailContact" placeholder="me@example.com" required>
+                </fieldset>
+                <fieldset class="message">
+                    <legend>Mensaje</legend>
+                    <textarea name="messageContact" id="messageContact" placeholder="Escriba aqui el mensaje que deseas enviar-nos." required></textarea>
+                </fieldset>
+                <div class="terms">
+                    <input type="checkbox" name="termsContact" id="termsContact" required>
+                    <label for="termsContact">Acepto los Términos y Condiciones</label>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div>
+            <h1><a href="./index.html" title="Home">Sound<span>TecITB</span></a></h1>
+            <p>&copy;&nbsp;2025 SoundTecITB ·&nbsp;<address>C/ Aiguablava, 123</address>&nbsp;·&nbsp;<address>Barcelona</address></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://instagram.com/">Instagram</a></li>
+                <li><a href="https://tiktok.com/">TikTok</a></li>
+                <li><a href="https://x.com/">X</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,276 @@
+.festivals header h2, .top10 header h2 {
+    display: inline;
+    background-image: var(--gradient-pink-to-cyan);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: bottom;
+}
+
+.releases header a, .artist header a, .festivals header p, .top10 header a {
+    padding: 10px;
+    border-radius: 1000px;
+}
+
+.releases, .artist, .festivals, .top10 {
+    width: 100%;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1rem;
+    }
+    & > div {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+.releases article, .releases header a, .artist article, .artist header a, .top10 header a {
+    transition: 0.3s;
+}
+
+.releases article:hover, .releases header a:hover, .artist article:hover, .artist header a:hover, .top10 header a:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+/* 1st Section */
+.homepage {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    padding: 70px 0 80px 0;
+
+    img {
+        width: 40%;
+        margin-left: 5rem;
+    }
+    h2 {
+        font-size: 2em;
+
+        span {
+            background: linear-gradient(90deg, rgba(255, 43, 166, 1) 0%, rgba(32, 227, 255, 1) 50%, rgba(182, 255, 59, 1) 100%);
+            color: transparent;
+            background-clip: text;
+        }
+    }
+}
+
+/* Button border gradient animation */
+/* Reference: https://www.youtube.com/watch?v=PTVXnOrQoBQ */
+.mainBtn {
+    margin: 5px;
+    padding: 10px;
+    background: #000;
+    border: none;
+    border-radius: 1000px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 107%;
+        width: 102%;
+        border-radius: 1000px;
+        z-index: -1;
+    }
+    &:hover {
+        z-index: 0;
+
+        &:active {
+            filter: brightness(0.75);
+        }
+        &.secondary {
+            color: #000;
+        }
+    }
+}
+
+.mainBtn.primary::after {
+    background-image: var(--mainbtn-primary-gradiant);
+}
+
+.mainBtn.secondary::after {
+    background: var(--mainbtn-secondary-gradiant);
+}
+
+.homeTags p {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid var(--gray-05);
+    border-radius: 25px;
+    display: inline-flex;
+}
+
+/* releases */
+.releases {
+    background: linear-gradient(180deg, hsl(190, 57%, 28%) 0%, #000 100%);
+
+    header a {
+        border: 2px solid hsl(190, 57%, 48%);
+        background: linear-gradient(to right, hsl(190, 57%, 48%), hsl(190, 57%, 28%));
+        margin-top: 5px;
+    }
+    &>div>div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    article {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 1rem;
+        width: 13em;
+        margin: 10px;
+        background-color: #000;
+
+        h3 {
+            padding: 0;
+            margin: 0;
+        }
+        &> div {
+            padding: 16px;
+
+            a {
+                padding: 10px;
+                border: 1px solid grey;
+                border-radius: 1000px;
+                margin-top: 5px;
+                display: inline-block;
+            }
+        }
+    }
+    img {
+        border-radius: 1rem 1rem 0 0;
+        aspect-ratio: 2;
+        object-fit: cover;
+    }
+}
+
+/* Artist */
+.artist {
+    background: linear-gradient(180deg, #6D1A4A 0%, #000000 100%);
+
+    header a {
+        border: 2px solid hsl(325, 61%, 46%);
+        background: linear-gradient(to right, hsl(325, 61%, 46%), #6D1A4A);
+        margin-top: 5px;
+    }
+    article {
+        margin: 10px;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 10px;
+            background-color: #000;
+            width: 20rem;
+
+            p span {
+                color: #ffce3d;
+                font-weight: bold;
+            }
+        }
+        img {
+            border-radius: 10px;
+            width: 5rem;
+            height: 5rem;
+            margin: 10px;
+            aspect-ratio: 2;
+            object-fit: cover;
+        }
+        div {
+            margin: 0 10px;
+        }
+    }
+    &>div>div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+/* Festivals */
+.festivals {
+    background: linear-gradient(180deg, #2F3E1C 0%, #000 100%);
+
+    header p {
+        border: 2px solid hsl(84, 48%, 28%);
+        background: linear-gradient(to right, hsl(84, 48%, 28%), #2F3E1C);
+    }
+    &>div>div, .festivalMainSection {
+        display: flex;
+    }
+    article {
+        margin: 10px;
+        width: 100%;
+        background-color: #000;
+        border-radius: 10px;
+    }
+    aside {
+        width: 25%;
+
+        img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        div {
+            padding: 10px;
+
+            a {
+                border: 1px solid gray;
+            }
+        }
+    }
+}
+
+.festivalMainSection {
+    background-color: #648C28;
+    height: fit-content;
+    border-radius: 10px;
+    width: 75%;
+
+    article {
+        a {
+            width: 100%;
+            display: block;
+        }
+        img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width: inherit;
+        }
+        div {
+            margin: 10px;
+
+            span {
+                background-color: #5C1F45;
+                border-radius: 1000px;
+                padding: 8px 10px;
+                display: inline-block;
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
+/* Top 10 */
+.top10 {
+    margin-bottom: 2rem;
+
+    header a {
+        border: 2px solid grey;
+    }
+    ol {
+        display: grid;
+        grid-template-rows: repeat(5, auto);
+        grid-auto-flow: column;
+
+        li p {
+            margin: 10px;
+        }
+    }
+}

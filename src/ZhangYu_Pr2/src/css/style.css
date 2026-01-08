@@ -1,0 +1,99 @@
+:root {
+    --gradient-pink-to-cyan: linear-gradient(90deg, rgba(255, 43, 166, 1) 0%, rgba(32, 227, 255, 1) 100%);
+    --mainbtn-primary-gradiant: linear-gradient(to right, #ff2ba6, #20e3ff);
+    --mainbtn-secondary-gradiant: #b7ff3b;
+    --gray-05: rgba(128, 128, 128, .5);
+}
+
+html, body, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Verdana, sans-serif;
+
+    /* Header of the webpage*/
+    & > header, & > footer {
+        padding: 20px 100px;
+        position: sticky;
+        overflow: hidden;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0;
+        border-top: 1px solid var(--gray-05);
+        border-bottom: 1px solid var(--gray-05);
+        z-index: 1000;
+
+        h1 {
+            font-size: 1.17em;
+        }
+
+        /* Add Gradient */
+        /* Reference: https://stackoverflow.com/questions/8384751/css-text-gradient */
+        span {
+            background: var(--gradient-pink-to-cyan);
+            color: transparent;
+            background-clip: text;
+        }
+    }
+
+    /* Footer */
+    & > footer {
+        padding-bottom: 30px;
+
+        nav {
+            margin-top: 10px;
+        }
+        p, address {
+            display: inline;
+        }
+    }
+}
+
+main {
+    display: grid;
+    justify-items: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    user-select: none;
+    width: 100%;
+}
+
+nav ul li {
+    list-style-type: none;
+    float: left;
+
+    a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 5px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: rgba(183, 255, 59, 0.631);
+        }
+    }
+}
+
+/* Reference: https://stackoverflow.com/questions/44147872/linear-gradient-underline-for-hyperlink */
+main section header h2 {
+    display: inline;
+    background-image: var(--gradient-pink-to-cyan);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: bottom;
+}

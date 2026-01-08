@@ -1,0 +1,152 @@
+fieldset {
+    border-radius: 10px;
+    padding: 1rem;
+
+    &:not(.other) {
+        margin: 2rem 0;
+    }
+    &.other, &.message {
+        margin-bottom: 10px;
+    }
+}
+
+label {
+    min-width: 48%;
+    margin-bottom: 10px;
+}
+
+textarea {
+    min-width: 45%;
+    height: 150px;
+    border: none;
+    outline: none;
+}
+
+input {
+    &[type=submit] {
+        width: 100%;
+        background: var(--mainbtn-secondary-gradiant);
+        color: black;
+        padding: 14px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 1000px;
+        cursor: pointer;
+    }
+    &:required {
+        &:not([type=checkbox], [type="radio"]) {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 1px solid #0077ff;
+            outline: none;
+            font-size: medium;
+            background-color: #000;
+            color: #fff;
+        }
+        &:not(:placeholder-shown, [type=date], [type="radio"]):invalid {
+            border-bottom: 1px solid red;
+        }
+        &:not([type="radio"]):valid {
+            border-bottom: 1px solid green;
+        }
+    }
+    &[type=date]::-webkit-calendar-picker-indicator {
+        filter: invert(100%) brightness(100%) contrast(100%);
+    }
+    &[type="radio"] {
+        appearance: none;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #999999;
+        transition: 0.2s all linear;
+        margin-right: 5px;
+        position: relative;
+        top: 4px;
+
+        &:checked {
+            border: 6px solid white;
+        }
+    }
+    &[type=checkbox] {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #0077ff;
+    outline: none;
+    font-size: medium;
+    background-color: #000;
+    color: #fff;
+}
+
+hr {
+    width: 75%;
+    height: 8px;
+    background-image: var(--gradient-pink-to-cyan);
+    border: 0;
+    height: 1px;
+}
+
+.signup, .contact {
+    margin: 1rem;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+
+    header {
+        margin: 20px 0;
+    }
+    form {
+        fieldset input:first-of-type {
+            margin-top: 0;
+        }
+    }
+    textarea {
+        width: 99%;
+        min-height: fit-content;
+        max-height: 30rem;
+        resize: none;
+        overflow-y: scroll;
+        background-color: black;
+        color: white;
+        font-size: larger;
+    }
+}
+
+.signup form .other div {
+    display: grid;
+}
+
+.gender {
+    display: inline-flex;
+    align-items: baseline;
+    width: 100%;
+
+    &>div {
+        display: inline-flex;
+        width: 100%;
+
+        &>div {
+            display: inline-flex;
+            margin: 0 auto;
+        }
+    }
+    label {
+        min-width: unset;
+    }
+}
+
+.terms {
+    padding: 10px;
+}
