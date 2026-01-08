@@ -11,6 +11,8 @@
     --shadow: rgba(0, 0, 0, 0.1);
     --tag-bg: #e5e7eb;
     /* Color de fondo para las etiquetas */
+    --btn-bg: #24292e;
+    --btn-text: #fff;
 }
 
 /* --- 2. Modo Oscuro (Automático) --- */
@@ -26,6 +28,8 @@
         --border-color: #374151;
         --shadow: rgba(0, 0, 0, 0.5);
         --tag-bg: #374151;
+        --btn-bg: #dbd6d1;
+        --btn-text: #1f2937;
     }
 }
 
@@ -225,8 +229,8 @@ article.card:hover {
 
 .card-btn {
     display: block;
-    background-color: #24292e;
-    color: white;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
     padding: 0.75rem;
     text-decoration: none;
     border-radius: 6px;

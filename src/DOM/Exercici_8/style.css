@@ -1,0 +1,26 @@
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    width: 400px;
+}
+
+.celda {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.negra {
+    background-color: #000;
+    color: #fff;
+}
+
+.blanca {
+    background-color: #fff;
+    color: #000;
+}

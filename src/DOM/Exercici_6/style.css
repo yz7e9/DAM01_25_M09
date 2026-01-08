@@ -1,0 +1,45 @@
+.tecla {
+    /* display: inline-block; */
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    text-align: center;
+    line-height: 60px;
+    /* background-color: hsl(0, 0%, 94%); */
+    background-color: hsl(180, 100%, 27%);
+    /* border: 1px solid hsl(0, 0%, 80%); */
+    /* border: 1px solid hsl(180, 100%, 13%); */
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #fff;
+}
+.tecla:hover {
+    /* background-color: hsl(0, 0%, 88%); */
+    background-color: hsl(180, 100%, 21%);
+}
+
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 250px;
+    /* margin: 0 auto; */
+    margin-top: 20px;
+}
+
+.multiplo3 {
+    background-color: hsl(48, 100%, 50%);
+}
+.multiplo3:hover {
+    background-color: hsl(48, 100%, 44%);
+}
+
+.par {
+    background-color: hsl(240, 100%, 50%)
+}
+.par:hover {
+    background-color: hsl(240, 100%,44%);
+   
+}

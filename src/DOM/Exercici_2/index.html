@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1 id="tituloPrincipal">Título original</h1>
+        <p id="texto">Texto original</p>
+        <script>
+            document.getElementById("tituloPrincipal").textContent = "Título actualizado"
+            document.getElementById("texto").textContent = "Texto actualizado"
+        </script>
+    </section>
+    <section>
+        <img src="https://imgproxy.nanxiongnandi.com/x54nINso4cBshOf8ICYeoGHwqUGzYHDa1RFeKnpRVF4/w:800/aHR0cHM6Ly9pbWcu/bmFueGlvbmduYW5k/aS5jb20vMjAyNTEw/L0J1bGdhcmlhUm9j/a3MuanBn.jpg" alt="Belogradchik Rocks, Bulgaria (© EvaL Miko/Shutterstock)(Bing United States)">
+        <p id="descripcion">Descripción imagen</p>
+        <script>
+            document.querySelector("img").setAttribute("src", "https://imgproxy.nanxiongnandi.com/a6_7JkKNgcSCVnqFnquqcNv92Ev1uEmEMWDVcAqVIdM/w:1280/aHR0cHM6Ly9pbWcu/bmFueGlvbmduYW5k/aS5jb20vMjAyNTEy/L0V2ZXJlc3RHbG93/LmpwZw.jpg")
+            document.getElementById("descripcion").textContent = "Imagen actualizada"
+        </script>
+    </section>
+    <section>
+        <h1 id="titulo">Hola, mundo</h1>
+
+        <script>
+            const title = document.getElementById("titulo")
+            title.style.color = "red"
+            title.style.fontSize = "32px"
+        </script>
+    </section>
+ </body>
+</html>
