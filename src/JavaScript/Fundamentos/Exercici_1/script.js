@@ -1,3 +1,10 @@
+document.getElementById("exercise1").addEventListener("click", () => exercises(1));
+document.getElementById("exercise2").addEventListener("click", () => exercises(2));
+document.getElementById("exercise3").addEventListener("click", () => exercises(3));
+document.getElementById("exercise4").addEventListener("click", () => exercises(4));
+document.getElementById("exercise5").addEventListener("click", () => exercises(5));
+document.getElementById("exercise6").addEventListener("click", () => exercises(6));
+
 /**
  * Main function to call other functions according to `exercise`
  * @param {Number} exercise Operation number
@@ -5,8 +12,8 @@
 function exercises(exercise) {
     switch (exercise) {
         case 1: {
-            const n1 = parseInt(prompt("Introduiex el primer número:"))
-            const n2 = parseInt(prompt("Introduiex el segon número:"))
+            const n1 = parseInt(prompt("Introdueix el primer número:"))
+            const n2 = parseInt(prompt("Introdueix el segon número:"))
             if (n1 && n2) {
                 const result = compareNums(n1, n2)
                 document.getElementById("resultado1").textContent = result ? "El número màxim és: " + result : "Els dos nombres són iguals."
@@ -14,8 +21,8 @@ function exercises(exercise) {
             break;
         }
         case 2: {
-            const n1 = parseInt(prompt("Introduiex el primer número:"))
-            const n2 = parseInt(prompt("Introduiex el segon número:"))
+            const n1 = parseInt(prompt("Introdueix el primer número:"))
+            const n2 = parseInt(prompt("Introdueix el segon número:"))
             if (n1 && n2) {
                 const result = multiplication2Num(n1, n2)
                 document.getElementById("resultado2").textContent = "La multiplicació de " + n1 + " i " + n2 + " és: " + result
@@ -23,9 +30,9 @@ function exercises(exercise) {
             break;
         }
         case 3: {
-            const n1 = parseInt(prompt("Introduiex el primer número:"))
-            const n2 = parseInt(prompt("Introduiex el segon número:"))
-            const n3 = parseInt(prompt("Introduiex el tercer número:"))
+            const n1 = parseInt(prompt("Introdueix el primer número:"))
+            const n2 = parseInt(prompt("Introdueix el segon número:"))
+            const n3 = parseInt(prompt("Introdueix el tercer número:"))
             if (n1 && n2 && n3) {
                 const result = multiplication3Num(n1, n2, n3)
                 document.getElementById("resultado3").textContent = "La multiplicació de " + n1 + ", " + n2 + " i " + n3 + " és: " + result
@@ -33,9 +40,9 @@ function exercises(exercise) {
             break;
         }
         case 4: {
-            const n1 = parseFloat(prompt("Introduiex la primera nota:")).toFixed(1)
-            const n2 = parseFloat(prompt("Introduiex la segona nota:")).toFixed(1)
-            const n3 = parseFloat(prompt("Introduiex la tercera núnotamero:")).toFixed(1)
+            const n1 = parseFloat(prompt("Introdueix la primera nota:")).toFixed(1)
+            const n2 = parseFloat(prompt("Introdueix la segona nota:")).toFixed(1)
+            const n3 = parseFloat(prompt("Introdueix la tercera nota:")).toFixed(1)
             if (n1 && n2 && n3) {
                 const result = average3Grades(n1, n2, n3)
                 document.getElementById("resultado4").textContent = "La mitjana de la nota " + n1 + ", " + n2 + " i " + n3 + " és: " + result
@@ -52,7 +59,7 @@ function exercises(exercise) {
         }
         case 6: {
             // Reference: https://stackoverflow.com/questions/2917175/return-multiple-values-in-javascript
-            const num = prompt("Introduiex el número:")
+            const num = prompt("Introdueix el número:")
             if (num) {
                 const {status, result} = calcCube(num);
                 if (!status) {
@@ -73,7 +80,7 @@ function exercises(exercise) {
  * @author Yu Zhang
  * @param {Number} n1 The first number
  * @param {Number} n2 The second number
- * @returns The biggest number, if is iqual, returns undefined
+ * @returns The biggest number, if is equal, returns undefined
  */
 function compareNums(n1, n2) {
     if (n1 > n2) return n1
@@ -86,7 +93,7 @@ function compareNums(n1, n2) {
  * @author Yu Zhang
  * @param {Number} n1 The first number
  * @param {Number} n2 The second number
- * @returns The resut of the multiplication
+ * @returns The result of the multiplication
  */
 function multiplication2Num(n1, n2) {
     let result = 0

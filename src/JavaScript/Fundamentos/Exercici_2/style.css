@@ -1,0 +1,10 @@
+.ejercicio {
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.resultado {
+    background-color: rgb(195, 192, 192);
+    margin-bottom: 10px;
+}
