@@ -23,14 +23,13 @@ let coches = [
 ];
 
 function main() {
-    const anyoActual = new Date().getFullYear();
     const resultado = coches
         .filter(coche => 
             coche[0] !== "Alfa Romeo" &&
             coche[0] !== "Kia" &&
-            (anyoActual - coche[2]) > 20
+            (new Date().getFullYear() - coche[2]) > 20
         )
-        
+        .sort((a, b) => b[3] - a[3])
         .map(coche => [
             coche[0],
             coche[1],
