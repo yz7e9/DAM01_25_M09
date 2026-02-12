@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión Tarjetas</title>
+</head>
+
+<body>
+    <h1>Gestión de Tarjetas de Crédito</h1>
+
+    <h2>Crear nueva tarjeta</h2>
+    Número: <input type="text" id="numero"><br>
+    Titular: <input type="text" id="titular"><br>
+    Caducidad: <input type="month" id="caducidad"><br>
+    CVV: <input type="text" id="cvv"><br>
+    PIN: <input type="text" id="pin"><br>
+    <button onclick="crearTarjeta()">Crear Tarjeta</button>
+
+    <hr>
+
+    <h2>Operaciones</h2>
+
+    Seleccionar tarjeta:
+    <select id="selectorTarjetas"></select>
+    <br><br>
+
+    PIN: <input type="text" id="pinOperacion"><br>
+    Cantidad: <input type="number" id="cantidad"><br><br>
+
+    <button onclick="activar()">Activar</button>
+    <button onclick="anular()">Anular</button>
+    <button onclick="ingresar()">Ingresar</button>
+    <button onclick="pagar()">Pagar</button>
+    <button onclick="verInfo()">Ver Información</button>
+
+    <p id="resultado"></p>
+
+    <script src="./script.js" defer></script>
+
+</body>
+
+</html>
