@@ -29,3 +29,29 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+document.querySelectorAll(".card-links-list li").forEach(li => {
+    const childList = li.querySelector(":scope > .card-links-list-child");
+
+    if (childList) {
+        const link = li.querySelector(":scope > a");
+
+        const arrow = document.createElement("span");
+        arrow.classList.add("toggle-arrow");
+        arrow.textContent = "▸";
+
+        link.after(arrow);
+
+        arrow.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            childList.classList.toggle("open");
+
+            arrow.textContent = childList.classList.contains("open")
+                ? "▾"
+                : "▸";
+        });
+
+    }
+
+});
