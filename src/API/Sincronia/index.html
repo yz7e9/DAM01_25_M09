@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REST Pokémon</title>
+    <script src="ApiRest.js" defer></script>
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        #data {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .pokemon {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        img {
+            width: 120px;
+        }
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+        input {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokédex</h1>
+    <input type="text" id="busqueda" placeholder="Buscar Pokémon por nombre">
+    <button onclick="buscarPokemon()">Buscar</button>
+
+    <div class="data" id="data"></div>
+
+</body>
+</html>
