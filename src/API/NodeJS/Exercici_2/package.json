@@ -1,0 +1,28 @@
+{
+  "name": "serverexpress",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/yz7e9/DAM01_25_M09#readme",
+  "bugs": {
+    "url": "https://github.com/yz7e9/DAM01_25_M09/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yz7e9/DAM01_25_M09.git"
+  },
+  "license": "ISC",
+  "author": "yz7e9",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

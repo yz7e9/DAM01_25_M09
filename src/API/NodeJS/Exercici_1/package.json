@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-api-rest",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/yz7e9/DAM01_25_M09#readme",
+  "bugs": {
+    "url": "https://github.com/yz7e9/DAM01_25_M09/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yz7e9/DAM01_25_M09.git"
+  },
+  "license": "ISC",
+  "author": "yz7e9",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  }
+}
